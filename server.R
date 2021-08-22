@@ -2,10 +2,13 @@ shinyServer(function(input, output) {
   # Load the basemap, fit to NSW
   output$basemap <- renderLeaflet({
     leaflet() |>
-      fitBounds(lat1 = nsw_bb[2], lat2 = nsw_bb[4],
-                lng1 = nsw_bb[1], lng2 = nsw_bb[3]) |>
+      fitBounds(lat1 = -37, lat2 = -28.3,
+                lng1 = 141, lng2 = 154) |>
       addProviderTiles("CartoDB.Positron")
   })
+ 
+  # "Getting started" modal
+  show_intro()
   
   # Convert slider input from km to metres
   radius <- reactive({input$radius_slider * 1000})
