@@ -1,6 +1,13 @@
 shinyUI(fillPage(
-  # GitHub buttons
-  tags$head(tags$script(src ="https://buttons.github.io/buttons.js", async = NA, defer = NA)),
+  
+  tags$head(
+    # GitHub buttons
+    tags$script(src ="https://buttons.github.io/buttons.js", async = NA, defer = NA),
+    # Crosshair for map targeting
+    tags$style(type = "text/css",
+               ".leaflet-container {
+                cursor: crosshair !important
+               }")),
   
   # Leaflet map
   leafletOutput("basemap", width = "100%", height = "100%"),
