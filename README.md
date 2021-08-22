@@ -1,4 +1,4 @@
-# shiny-lga-radius
+# Radius + LGA checker
 
 <!-- badges: start -->
 
@@ -7,6 +7,8 @@
 [Current NSW COVID-19 lockdown orders](https://www.nsw.gov.au/covid-19/rules) (at 22 August 2021) allow travel for essential shopping within your own Local Government Area or up to 5km from your home. This R/Shiny app displays the union of your 5km radius and the extent of your own LGA.
 
 A deployed example of this app is running at <https://gardiners.shinyapps.io/shiny-lga-radius/>.
+
+[![](static/demo.gif "Example")](https://gardiners.shinyapps.io/shiny-lga-radius/)
 
 -   **Click** or **tap** to check a location.
 -   **Drag** to pan the map.
