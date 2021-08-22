@@ -1,9 +1,9 @@
 shinyServer(function(input, output) {
   # Load the basemap, fit to NSW
   output$basemap <- renderLeaflet({
-    leaflet() %>%
+    leaflet() |>
       fitBounds(lat1 = nsw_bb[2], lat2 = nsw_bb[4],
-                lng1 = nsw_bb[1], lng2 = nsw_bb[3]) %>%
+                lng1 = nsw_bb[1], lng2 = nsw_bb[3]) |>
       addProviderTiles("CartoDB.Positron")
   })
   
@@ -13,13 +13,13 @@ shinyServer(function(input, output) {
   
   # Update or add allowed zone
   observe({
-    leafletProxy("basemap") %>%
+    leafletProxy("basemap") |>
       clearShapes()
     event <- input$basemap_click
     if (is.null(event)) return()
     
-      show_zone(x = event$lng,
-                y = event$lat,
-                radius = (radius_d()))
+    show_zone(x = event$lng,
+              y = event$lat,
+              radius = (radius_d()))
   })
 })
