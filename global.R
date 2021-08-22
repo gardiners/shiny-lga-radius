@@ -5,5 +5,5 @@ library(shinybusy)
 library(arcpullr)
 source("R/get_geometries.R")
 
-# Things we don't want to recompute in every sessions:
+# Things we don't want to recompute in every session:
 lgas <- load_lgas()
