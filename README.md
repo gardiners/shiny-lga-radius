@@ -13,7 +13,7 @@ A deployed example of this app is running at <https://gardiners.shinyapps.io/shi
 -   **Scroll** or **pinch** to zoom
 -   Change the radius with the slider.
 
-If self-hosting, the app will fetch NSW LGA boundaries from the ABS, which may take several minutes depending on the speed of your connection. On future runs, stored boundaries will be used. If you want to use LGAs for other states, tweak the function [`load_lgas()`](blob/master/R/get_geometries.R).
+If self-hosting, the app will fetch NSW LGA boundaries from the ABS, which may take several minutes depending on the speed of your connection. On future runs, stored boundaries will be used. If you want to use LGAs for other states, tweak the function [`load_lgas()`](R/get_geometries.R).
 
 Always check official NSW Government sources for the [latest COVID-19 rules](https://www.nsw.gov.au/covid-19/rules). Do not rely on a shiny app you found online for public health information.
 
