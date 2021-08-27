@@ -13,12 +13,13 @@ show_zone <- function(x, y, radius){
   remove_modal_spinner()
 }
 
+# Modal popup on first load
 show_intro <- function(){
   showModal(
     modalDialog(
       title = "About this app",
       easyClose = TRUE,
-      markdown("Find the overlapping area between a NSW LGA and the radius around a chosen location.
+      markdown("Find the union of a NSW LGA and the radius around a chosen location.
                
                * **Click** or **tap** to check a location.
                * **Drag** to pan the map.
@@ -26,7 +27,7 @@ show_intro <- function(){
                * Change the radius with the slider.
                
                Always check official NSW Government sources for the [latest COVID-19 rules](https://www.nsw.gov.au/covid-19/rules).
-               Do not rely on a shiny app you found online for public health information.
+               Do not rely on a Shiny app you found online for public health information.
                
                [LGA boundary data](https://www.abs.gov.au/websitedbs/D3310114.nsf/home/Digital+Boundaries)
                is provided by the Australian Bureau of Statistics. The ABS 2020 LGA mesh block approximation is used."
